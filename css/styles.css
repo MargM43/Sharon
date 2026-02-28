@@ -19,7 +19,7 @@
 }
 
 .grid-container {
-    max-width: 1120px;
+    /* max-width: 1120px; */
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -107,18 +107,19 @@
 }
 
 .grid-item .item-main {
-    /* padding: 3rem; */
     grid-column: 1 / 5;
     grid-row: 4 / 5;
     height: 10rem;
 }
+.item-main {display: grid;
+    text-align: center;
+    gap: 10px;
+}
 
 .item-main-1 {
-    grid-row: 4 / 5;
+    /* grid-row: 4 / 5; */
     margin-top: 0;
     padding-top: 1.5rem;
-    height: 5rem;
-    border: 2px solid #39393c;
     margin-bottom: 1rem;
 }
 
@@ -128,20 +129,122 @@
     padding-top: 1.5rem;
     height: 5rem;
     margin-bottom: 2rem;
-    border: 2px solid #39393c;
+    /* border: 2px solid #39393c; */
 }
 
 .item-main-3 {
     display: grid;
-    gap: 1rem;
-    grid-template-areas: 
-    'dog-1 dog-2 dog-3 dog-4'
-    'dog-5 dog-6 dog-7 dog-8'
-    'dog-9 dog-10 dog-11 dog-12' 
-    'dog-13 dog-14 dog-15 dog-16';
-    height: 30rem;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    height: 20rem;
+    gap: 10px;
+    justify-items: stretch;
+
 }
 
+.item-1 {
+    height: 15rem;
+    grid-row: 1 / 2;
+    background-image: url(/images/BabyTeyha.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.item-2 {
+    background-image: url(/images/GingerHazel.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+
+.item-3 {
+    background-image: url(/images/dogTie.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+.item-4 {
+    background-image: url(/images/Kuzie.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+.item-5 {
+    height: 15rem;
+    background-image: url(/images/Millie1.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+.item-6 {
+    background-image: url(/images/Billy.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+.item-7 {
+    background-image: url(/images/Schnauzer.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+.item-8 {
+    background-image: url(/images/DogTiedToGate.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+.item-9 {
+    height: 15rem;
+    background-image: url(/images/Cavvy.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+.item-10 {
+    background-image: url(/images/Millie2.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+.item-11 {
+    background-image: url(/images/Paddy\ 2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+.item-12 {
+    background-image: url(/images/Poodle.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+.item-13 {
+    height: 15rem;
+    background-image: url(/images/Poodle2.webp);
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-size: cover; 
+}
+.item-14 {
+    background-image: url(/images/Paddy\ 3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+.item-15 {
+    background-image: url(/images/Small\ terrier\ copy.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+.item-16 {
+    background-image: url(/images/DogOnMat.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
 
 
 
