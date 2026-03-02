@@ -4,6 +4,10 @@
     box-sizing: border-box;
 } 
 
+h2 {
+    font-size: 30px;
+    color: #fd05f1;
+}
 
 .header {
     grid-row: 1 / 2;
@@ -12,14 +16,14 @@
     padding: 3rem;
     }
 
-.container {
+/* .container {
     display: grid;
     grid-column: 1 / 5;
     grid-row: 2 / 3;
-}
+} */
 
 .grid-container {
-    /* max-width: 1120px; */
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -27,7 +31,7 @@
     text-align: center;
 }
 
-.grid-item{
+.grid-item {
     background: lightgray;
     grid-column: 1 / 5;
 }
@@ -41,6 +45,13 @@
 .flex-item {
     flex: 1;
 } 
+
+h2 {
+    color: #fd05f1;
+    font-size: 30px;
+    letter-spacing: .2rem;
+    margin: 0 auto;
+}
 
 .container-1 {   
     grid-row: 2 / 3;
@@ -78,6 +89,7 @@
 
 .flex-item-3 {
     grid-column: 1 / 2;
+    grid-row: 4 / 5;
     background-image: url(/images/DogOnMat.webp);
     background-repeat: no-repeat;
     background-size: cover;
@@ -92,9 +104,9 @@
     padding-top: 0;
 }
 
-.flex-item-4 h2 {
+/* .flex-item-4 h2 {
     margin: 0 auto;
-}
+} */
 
 .flex-item-4 p {
     align-items: start;
@@ -108,19 +120,21 @@
 
 .grid-item .item-main {
     grid-column: 1 / 5;
-    grid-row: 4 / 5;
-    height: 10rem;
+    grid-row: 5 / 6;
+    /* height: 20rem; */
 }
-.item-main {display: grid;
+/* .item-main {
+    display: grid;
     text-align: center;
     gap: 10px;
-}
+} */
+
 
 .item-main-1 {
-    /* grid-row: 4 / 5; */
+    grid-row: 6 / 7;
     margin-top: 0;
     padding-top: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 
 .item-main-2 {
@@ -134,17 +148,18 @@
 
 .item-main-3 {
     display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(4, 1fr);
-    height: 20rem;
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     justify-items: stretch;
-
 }
 
+.item {
+    height: 25rem;
+}
+
+
 .item-1 {
-    height: 15rem;
-    grid-row: 1 / 2;
+    height: 25rem;
     background-image: url(/images/BabyTeyha.webp);
     background-repeat: no-repeat;
     background-position: center;
@@ -155,7 +170,7 @@
     background-image: url(/images/GingerHazel.webp);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover; 
+    background-size: cover;
 }
 
 .item-3 {
@@ -171,7 +186,7 @@
     background-size: cover; 
 }
 .item-5 {
-    height: 15rem;
+    height: 25rem;
     background-image: url(/images/Millie1.webp);
     background-repeat: no-repeat;
     background-position: center;
@@ -196,7 +211,7 @@
     background-size: cover; 
 }
 .item-9 {
-    height: 15rem;
+    height: 25rem;
     background-image: url(/images/Cavvy.webp);
     background-repeat: no-repeat;
     background-position: center;
@@ -221,7 +236,7 @@
     background-size: cover; 
 }
 .item-13 {
-    height: 15rem;
+    /* height: 15rem; */
     background-image: url(/images/Poodle2.webp);
     background-repeat: no-repeat;
     background-position-y: top;
@@ -240,10 +255,7 @@
     background-size: cover; 
 }
 .item-16 {
-    background-image: url(/images/DogOnMat.webp);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; 
+  display: none;
 }
 
 
@@ -259,7 +271,21 @@
     .container-2 {
         height: 25rem;
     }
-}
+    .item-main-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .item {
+        height: 18rem;
+    }
+    .item-16 {
+        display: none;
+    }
+    /* .item-10 {
+        height: 15rem;
+    } */
+        
+    }
+
 
 @media (max-width: 768px) {
     .container-1,
@@ -268,10 +294,64 @@
         flex-direction: column;
         height: 27rem;
     }
+    .item-main-3 {
+        grid-template-columns: 1fr 1fr;
+    }
     .flex-item-2,
     .flex-item-3 {
         display: none;
     }
+    .item {
+        background-position-y: top;
+        height: 20rem;
+    }
+    .item-3,
+    .item-5,
+    .item-7,
+    .item-9,
+    .item-11 {
+        height: 20rem;
+    }
+    .item-15 {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .item-main-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .item-main-3 {
+        color: white;
+        font-size: 20px;
+    }
+.item-1,
+.item-2,
+.item-3,
+.item-4,
+.item-5,
+.item-6,
+.item-7,
+.item-8,
+.item-10,
+.item-12,
+.item-13,
+.item-14 {
+    height: 20rem;
+}
+.item-6,
+.item-8,
+.item-9,
+.item-11,
+.item-12 {
+    display: none;
+}
+.item-3,
+.item-4 {
+    background-position-y: top;
+}
+
 }
 
 
