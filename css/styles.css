@@ -16,24 +16,26 @@ h2 {
     padding: 3rem;
     }
 
-/* .container {
-    display: grid;
-    grid-column: 1 / 5;
-    grid-row: 2 / 3;
-} */
+body {
+    background-color: #000;
+}
+
+p {
+    color: #dfd8dc;
+}
 
 .grid-container {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    /* gap: 10px; */
     text-align: center;
 }
 
 .grid-item {
-    background: lightgray;
     grid-column: 1 / 5;
+    background-color: #000;
 }
 
 .flex-container {
@@ -60,7 +62,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     height: 30rem;
-    row-gap: 0;
+    row-gap: 10;p
 }
 
 .flex-item-1 {
@@ -85,6 +87,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     height: 500px;
+    gap: 0;
 }  
 
 .flex-item-3 {
@@ -123,27 +126,24 @@ h2 {
     grid-row: 5 / 6;
     /* height: 20rem; */
 }
-/* .item-main {
-    display: grid;
-    text-align: center;
-    gap: 10px;
-} */
 
-
-.item-main-1 {
+.item-main-4 {
     grid-row: 6 / 7;
     margin-top: 0;
     padding-top: 1.5rem;
     margin-bottom: 0;
 }
 
-.item-main-2 {
+.item-main-1 {
     
     margin-top: 0;
-    padding-top: 1.5rem;
+    padding-top: 2.5rem;
     height: 5rem;
     margin-bottom: 2rem;
     /* border: 2px solid #39393c; */
+}
+.item-main-2 {
+    padding: 2rem 0;
 }
 
 .item-main-3 {
@@ -258,10 +258,31 @@ h2 {
   display: none;
 }
 
+.happy-people {
+    display: grid;
+    grid-column: 1 / 5;
+    grid-row: 7 / 8;
+    height: 20rem;
+    padding-top: 2rem;
+}
 
 
+.gift-certificate {
+    display: grid;
+    grid-row: 8 / 10;
+    grid-column: 1 / 5;
+    margin: 0 auto;
+    height: 25rem;
+}
 
+.gift-certificate h2 {
+    margin-bottom: 0;
 
+}
+
+.gift-certificate p {
+    background-image: url(/images/Sharon\'s\ gift\ certificate.jpg);
+}
 
 
 
