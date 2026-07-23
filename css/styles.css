@@ -23,10 +23,6 @@ img {
     max-inline-size: 100%;
 }
 
-/* ul {
-    list-style: none;
-    color: var(--text-clr);
-} */
 
 h1, h2, h3 {
     font-family: EB Garamond, serif;
@@ -264,11 +260,6 @@ article .testimonial {
 }
 
 
-/* .testimonial img {
-  width: 1.75rem;
-  aspect-ratio: 1;
-  border-radius: 50%;
-} */
 
 .testimonial .name {
   font-size: var(--fs-400);
@@ -374,12 +365,12 @@ form {
     margin-block-end: 2rem;
 }
 
-.stars {
+/* .star-ratings {
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-size: 3rem;
-}
+} */
 
 label {
     display: block;
@@ -406,7 +397,7 @@ textarea {
     block-size: 150px;
 }
 
-ul {
+ul.stars {
     display: flex;
     gap: 4rem;
     margin: 0 auto; 
@@ -415,25 +406,28 @@ ul {
     list-style: none;
 }
                             /* Formatting the radio buttons */
-ul li {
+ul.stars li {
     display: inline-block;
     color: white;
-    text-shadow: 2px 2px 7px grey;
+    text-shadow: 5px 4px 2px grey;
     font-size: 1.5rem;
 }
 
-ul li:hover {
-    color: var(--link-clr);
+ul.stars li:hover {
+    background-color: var(--link-clr);
+    font-size: 2rem;
 }
 
-ul li.active, ul li.secondary-active {
-    color: var(--link-clr);
+ul.stars li.active, ul.stars li.secondary-active {
+    background-color: var(--link-clr);
     font-size: 2rem;
 }
 
 input[type="radio"] {
     display: none;
 }
+
+
 
 input:focus, 
 textarea:focus {
