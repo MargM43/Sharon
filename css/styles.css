@@ -27,6 +27,8 @@ img {
 h1, h2, h3 {
     font-family: EB Garamond, serif;
     color: var(--link-clr);
+    text-align: center;
+    font-size: 3rem;
 }
 h2 {
     font-size: 2rem;
@@ -61,18 +63,24 @@ header {
       display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (width <= 600px) {
+        justify-content: center;
+        padding-block-end: 1rem;
+    }
 }
 
 menu {
     padding-block: 2rem;
+   
 }
 
 menu ul {
     display: flex;
+    list-style: none;
     gap: 1.5rem;
-    @media (width <= 300px) {
+    @media (width <= 600px) {
         flex-direction: column;
-        justify-self: center;
+        list-style: none;
     }
 }
 
@@ -84,11 +92,19 @@ menu a {
 
 .site-tagline {
     color: var(--tagline-clr);
-    font-size: 1.5rem;
-    @media (width <= 375px) {
+    font-size: 1.2rem;
+  
+    @media (width <= 600px) {
         display: none;
     }
 }
+
+.left-side {
+    display: flex;
+   align-items: center;   
+}
+
+
 
 .active, span {
     color: var(--link-clr);
@@ -109,19 +125,29 @@ footer {
     justify-content: space-around;
 }
 
-footer img {
+footer img,
+header img {
     max-block-size: 5rem;
 }
 
 .branding {
     max-block-size: 100vb;
-    max-inline-size: 100vb;
+    max-inline-size: 100wb;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    @media (width <= 600px) {
+        display: none;
+    }
 }
 
 .balance {
     padding-top: 5rem;
+}
+
+.balance + img {
+    @media (width <= 600px) {
+        display: none;
+    }
 }
 
 .about-brief {
@@ -130,8 +156,17 @@ footer img {
     margin-block-start: 2rem;
     gap: 2rem;
      max-block-size: 100vb;
-    max-inline-size: 100vb;
+    max-inline-size: 100vw;
+    @media (width <= 600px) {
+        grid-template-columns: 1fr;
+        margin-top: 1rem;
+        .mat-dog {
+            display: none;
+        }
+    }
 }
+
+.
 
 .wrapper h2 {
     padding-block-start: 1rem;
@@ -165,7 +200,12 @@ footer img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    @media (width <= 600px) {
+        grid-template-columns: 1fr;
+    }
 }
+
+
 .first,
 .second,
 .third,
@@ -183,12 +223,21 @@ footer img {
 
 .first {
     background-image: url(/images/Billy.webp);
+    @media (width <= 600px) {
+    background-position: bottom;
+    }
 }
 .second {
     background-image: url(/images/Cavvy.webp);
+      @media (width <= 600px) {
+    background-position: top;
+    }
 }
 .third {
     background-image: url(/images/dogTie.webp);
+      @media (width <= 600px) {
+    background-position: top;
+    }
 }
 .fourth {
     background-image: url(/images/DogTiedToGate.webp);
@@ -317,7 +366,7 @@ article .testimonial {
 }
 
 .testimonial:nth-child(4) > p {
-    color: var(--clr-neutral-100);
+    color: var(--link-clr);
 }
 
 .testimonial:last-child {
@@ -363,6 +412,9 @@ form {
     border-radius: 15px;
     box-shadow: 10px 10px 10px 5px var(--shadow-clr);
     margin-block-end: 2rem;
+    @media (width <= 900px) {
+        margin: 0 auto;
+    }
 }
 
 /* .star-ratings {
@@ -391,6 +443,9 @@ input[type='text'],
 input[type='email'] {
     border-radius: 10px ;
     height: 50px;
+      @media (width <= 900px) {
+    inline-size: stretch;
+    }
 }
 
 textarea {
@@ -427,6 +482,11 @@ input[type="radio"] {
     display: none;
 }
 
+#gifts {
+    @media (width <= 900px){
+        margin-block-start: 3rem;
+    }
+}
 
 
 input:focus, 
@@ -505,5 +565,38 @@ padding-inline-end: 8px;
     letter-spacing: 1.2;
 }
 
+/* Grooming page */
 
+main h1 {
+    margin-block-end: 3rem;
+}
+
+.general-grooming {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-block: 2rem;
+}
+
+.grooming-wrapper {
+    padding-block-start: 4rem;
+   
+}
+
+.grooming-wrapper h2 {
+    padding-block-end: 1rem;
+}
+
+.puppy-grooming {
+    margin-block-start: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.puppy-grooming img {
+    margin-block-start: 3rem;
+} 
+
+.puppy-wrapper {
+    margin-block-start: 3rem;
+}
 
