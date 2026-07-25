@@ -30,13 +30,21 @@ h1, h2, h3 {
     text-align: center;
     font-size: 3rem;
 }
+
 h2 {
     font-size: 2rem;
     text-align: center;
 }
+
+.prices h2 {
+    color: var(--text-clr);
+}
 h3 {
     text-align: center;
+    font-size: 1.5rem;
 }
+
+
 
 a span {
     text-decoration: var(--link-clr);
@@ -44,7 +52,7 @@ a span {
 
 body {
     font-family: Outfit, sans-serif;
-    font-size: 1rem;
+    font-size: 1.3rem;
     background-color: var(--bg-clr);
     color: var(--text-clr);
 }
@@ -78,7 +86,7 @@ menu ul {
     display: flex;
     list-style: none;
     gap: 1.5rem;
-    @media (width <= 600px) {
+    @media (width <= 900px) {
         flex-direction: column;
         list-style: none;
     }
@@ -200,6 +208,12 @@ header img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    @media (width <= 900px) {
+        grid-template-columns: repeat(2, 1fr);
+        .fifth {
+            display: none;
+        }
+    }
     @media (width <= 600px) {
         grid-template-columns: 1fr;
     }
@@ -569,12 +583,21 @@ padding-inline-end: 8px;
 
 main h1 {
     margin-block-end: 3rem;
+    margin-block-start: -rem;
 }
 
 .general-grooming {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding-block: 2rem;
+    @media (width<= 900px) {
+        grid-template-columns: 1fr;
+        }
+    }
+.general-grooming img {
+    @media (width <= 900px) {
+        margin: 0 auto;
+    }
 }
 
 .grooming-wrapper {
@@ -587,16 +610,81 @@ main h1 {
 }
 
 .puppy-grooming {
-    margin-block-start: 2rem;
+    margin-block: 2rem 3rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    @media (width <= 900px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .puppy-grooming img {
     margin-block-start: 3rem;
+    @media (width <= 900px) {
+        margin: 0 auto;
+    }
 } 
 
 .puppy-wrapper {
     margin-block-start: 3rem;
+}
+
+.services {
+    width: 80%;
+    margin: 0 auto;
+    padding-block-end: 2rem;
+}
+
+.services h2 {
+        margin-bottom: 2rem;
+}
+
+.services > p {
+    letter-spacing: .1em;
+    line-height: 1.6;
+}
+
+video {
+    max-inline-size: 100%;
+    block-size: auto;
+    object-fit: cover;
+}
+
+.prices {
+    margin-block: 2rem;
+}
+.prices h2 {
+    padding-block-end: 2rem;
+}
+
+.prices ul {
+    list-style: none;
+}
+
+
+
+.prices li {
+    padding-block-end: 3rem;
+    font-size: 1.8rem;
+}
+
+.prices i {
+    padding-inline-end: 8rem;
+}
+
+.small i {
+ font-size: 2.5rem;
+}
+
+.medium i {
+    font-size: 3.5rem;
+}
+
+.large i {
+    font-size: 4.5rem;
+}
+.center {
+    text-align: center;
+    padding-block-start: 2rem;
 }
 
