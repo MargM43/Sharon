@@ -71,9 +71,12 @@ header {
       display: flex;
     justify-content: space-between;
     align-items: center;
-    @media (width <= 600px) {
+    @media (width <= 900px) {
         justify-content: center;
         padding-block-end: 1rem;
+    }
+    img {
+        display: none;
     }
 }
 
@@ -100,7 +103,7 @@ menu a {
 
 .site-tagline {
     color: var(--tagline-clr);
-    font-size: 1.2rem;
+    font-size: 1rem;
   
     @media (width <= 600px) {
         display: none;
@@ -123,19 +126,54 @@ a {
 }
 
 footer {
-       padding-inline: 3rem;
-    padding-block-end: 3rem;
+       padding-inline: 1.5rem;
+    padding-block-end: 1.5rem;
       display: flex;
     justify-content: space-between;
     margin-block-start: 2rem;
     border-top: 2px solid var(--link-clr);
     padding-block-start: 2rem;
     justify-content: space-around;
+    @media (width <= 900px) {
+       flex-direction: column-reverse;
+       justify-content: center;
+       align-items: center;
+       gap: 1rem;
 }
+        .business-info {
+            display: none;
+        }
+}
+
 
 footer img,
 header img {
     max-block-size: 5rem;
+}
+
+footer h2 {
+    font-size: 1rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+ .menu-bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-bottom li {
+    list-style: none;
+}
+
+.menu-bottom a {
+    color: var(--tagline-clr)
+}
+
+.menu-bottom a.active {
+    color: var(--link-clr);
 }
 
 .branding {
@@ -153,7 +191,7 @@ header img {
 }
 
 .balance + img {
-    @media (width <= 600px) {
+    @media (width <= 000px) {
         display: none;
     }
 }
@@ -384,8 +422,8 @@ article .testimonial {
 }
 
 .testimonial:last-child {
-    background-color: var(--clr-neutral-300);
-     border: 1px solid var(--shadow-clr);
+    background-color: var(--background-light);
+    border: 1px solid var(--shadow-clr);
 }
   
 
@@ -406,29 +444,30 @@ article .testimonial {
 
 
 
-.reviews h2 {
-    margin-block: 2rem;
-    padding-block-end: 1rem;
-}
 
 .reviews {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media (width < 600px) {
+        display: none;
+    }
 }
 
+.reviews h2 {
+    margin-block: 2rem;
+    padding-block-end: 1rem;
+}
 form {
     display: grid;
     gap: 1rem;
-    margin-inline: 10rem;
-    background-color: var(--background-light);
-    padding: 2rem;
-    border-radius: 15px;
+    /*margin-inline: 4rem;
+    */background-color: var(--background-light);
+    padding: 1rem;
+    border-radius: 10px;
     box-shadow: 10px 10px 10px 5px var(--shadow-clr);
     margin-block-end: 2rem;
-    @media (width <= 900px) {
-        margin: 0 auto;
-    }
+
 }
 
 /* .star-ratings {
@@ -443,29 +482,31 @@ label {
     margin-bottom: .3rem;
     color: var(--text-clr);
     font-weight: bold;
+ 
 }
 
 textarea {
     border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+  
 }
 
 input[type='text'],
 input[type='email'] {
     border-radius: 10px ;
     height: 50px;
-      @media (width <= 900px) {
-    inline-size: stretch;
-    }
 }
 
 textarea {
     block-size: 150px;
-}
+  
+    }
 
+
+form h3 {
+    @media (width <= 900px){
+        inline-size: 350px;
+    }
+}
 ul.stars {
     display: flex;
     gap: 4rem;
@@ -535,12 +576,24 @@ button[type='submit'] {
 
                     /* The gift certificate */
 
+.certificate-small-screen {
+    text-align: center;
+    @media (width > 900px) {
+        display: none;
+    }
+}
+
+
+
 .card {
     margin-block: 2rem;
     display: flex;
     gap: 2rem;
     border: 4px double var(--text-clr);
     padding-block: 2rem;
+    @media (width <= 900px) {
+        display: none;
+    }
 }
 
 .card .text {
@@ -583,7 +636,7 @@ padding-inline-end: 8px;
 
 main h1 {
     margin-block-end: 3rem;
-    margin-block-start: -rem;
+    margin-block-start: -5rem;
 }
 
 .general-grooming {
@@ -662,14 +715,19 @@ video {
 }
 
 
-
 .prices li {
     padding-block-end: 3rem;
     font-size: 1.8rem;
+    @media (width <= 900px){
+        font-size: 1.5rem;
+    }
 }
 
 .prices i {
     padding-inline-end: 8rem;
+    @media (width <= 900px) {
+        padding-inline-end: 5rem;
+    }
 }
 
 .small i {
@@ -687,4 +745,10 @@ video {
     text-align: center;
     padding-block-start: 2rem;
 }
+ .dog-examples > p{
+    padding-block-end: 2rem;
+ }
 
+ .dog-examples h3 {
+    padding-block-end: 1rem;
+ }
