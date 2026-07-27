@@ -67,7 +67,7 @@ body {
 header {
     margin-inline: -2rem;
     padding-inline: 3rem;
-    padding-block-end: 3rem;
+    padding-block-end: 2rem;
       display: flex;
     justify-content: space-between;
     align-items: center;
@@ -212,12 +212,18 @@ footer p {
     }
 }
 
-.
+.wrapper {
+    padding: 1rem;
+}
 
 .wrapper h2 {
     padding-block-start: 1rem;
-    text-align: center;
     font-size: 2rem;
+}
+
+.wrapper h3 {
+    margin-block-end: 2rem;
+    text-align: center;
 }
 
 .wrapper p {
@@ -752,3 +758,51 @@ video {
  .dog-examples h3 {
     padding-block-end: 1rem;
  }
+
+
+                        /* About page */
+
+.sharon-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-Shazza {
+    padding-block-start: 3rem;
+}
+
+.qualifications1 {
+    display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 2rem;
+} 
+
+.qualifications1 h3 {
+    text-align: left;
+}
+
+.caring {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.qualifications2 h2 {
+    margin-block: 2rem;
+}
+
+.caring p:last-child {
+    text-align: center;
+}
+#contact-me {
+    padding-block: 3rem;
+}
+
+.contact-details {
+    display: flex;
+  flex-direction: column;
+    gap: 2rem;
+    justify-content: center;align-items: center;
+}
+
+
+
