@@ -189,7 +189,7 @@ footer p {
 
 .branding {
     max-block-size: 100vb;
-    max-inline-size: 100vb;
+    max-inline-size: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
