@@ -731,10 +731,23 @@ main h1 {
     line-height: 1.6;
 }
 
-video {
-    max-inline-size: 100%;
+.ben-groomed {
+    inline-size: 100%;
     block-size: auto;
     object-fit: cover;
+}
+video {
+    inline-size: 100%;
+    block-size: auto;
+    object-fit: cover;
+}
+
+.grooming-style {
+    margin-block-start: 2rem;
+}
+
+.grooming-style h2 {
+    margin-block-end: 2rem;
 }
 
 .prices {
