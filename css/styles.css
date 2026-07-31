@@ -731,6 +731,10 @@ main h1 {
     line-height: 1.6;
 }
 
+.services p:nth-child(3) {
+    margin-block-end: 2rem;
+}
+
 .ben-groomed {
     inline-size: 100%;
     block-size: auto;
@@ -747,7 +751,11 @@ video {
 }
 
 .grooming-style h2 {
-    margin-block-end: 2rem;
+    margin-block: 2rem;
+}
+
+#upper {
+    text-transform: uppercase;
 }
 
 .prices {
